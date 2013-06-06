@@ -1,0 +1,5 @@
+services:
+    console:
+        class: Symfony\Component\Console\Application
+        tags:
+            - { name: "tag.consumer", tag: "console.command", method: "addCommands", bulk: true }

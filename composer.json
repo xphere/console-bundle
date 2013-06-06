@@ -1,0 +1,25 @@
+{
+    "name": "berny/console-bundle",
+    "description": "Simple integration for Symfony/Console into Symfony/HttpKernel based applications",
+    "license": "MIT",
+    "homepage": "https://github.com/xphere/console-bundle",
+    "authors": [
+        {
+            "name": "Berny Cantos",
+            "email": "be@rny.cc"
+        }
+    ],
+    "require": {
+        "symfony/console": "*",
+        "symfony/http-kernel": "*",
+        "symfony/config": "*",
+        "symfony/yaml": "*",
+        "berny/tag-bundle": "*"
+    },
+    "target-dir": "Berny/Bundle/Console",
+    "autoload": {
+        "psr-0": {
+            "Berny\\Bundle\\Console": ""
+        }
+    }
+}

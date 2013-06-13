@@ -3,3 +3,9 @@ services:
         class: Symfony\Component\Console\Application
         tags:
             - { name: "tag.consumer", tag: "console.command", method: "addCommands", bulk: true }
+            - { name: "dispatcher.aware" }
+    dispatcher:
+        class: Symfony\Component\EventDispatcher\EventDispatcher
+        tags:
+            - { name: "tag.consumer", tag: "event.subscriber", method: "addSubscriber" }
+            - { name: "tag.injectable", tag: "dispatcher.aware", method: "setDispatcher" }
